@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MUDAHEMAT - Aplikasi Pengeluaran Harian</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 flex items-center">
+              <i class="fas fa-wallet text-2xl text-indigo-400 mr-2"></i>
+              <span class="text-xl font-bold text-white"
+                >MUDA<span class="text-indigo-400">HEMAT</span></span
+              >
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="#home"
+                class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+                >Home</a
+              >
+              <a
+                href="#features"
+                class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+                >Fitur</a
+              >
+              <a
+                href="#app"
+                class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+                >Aplikasi</a
+              >
+              <a
+                href="#about"
+                class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+                >Tentang</a
+              >
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              class="mobile-menu-button p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="mobile-menu hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+            >Home</a
+          >
+          <a
+            href="#features"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+            >Fitur</a
+          >
+          <a
+            href="#app"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+            >Aplikasi</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
+            >Tentang</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="hero-bg min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
+    >
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="text-center md:text-left">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6">
+            <span class="gradient-text">Kelola Keuangan</span> dengan Mudah
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-300 mb-8">
+            Catat setiap pengeluaran dan pantau kebiasaan belanjamu dengan
+            aplikasi sederhana ini.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+          >
+            <a
+              href="#app"
+              class="px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition duration-300 text-center"
+            >
+              Mulai Sekarang
+            </a>
+            <a
+              href="#features"
+              class="px-8 py-3 bg-gray-700 hover:bg-gray-600 text-white font-bold rounded-lg transition duration-300 text-center"
+            >
+              Pelajari Fitur
+            </a>
+          </div>
+        </div>
+        <div class="hidden md:block">
+          <img
+            src="img/spending.png"
+            alt="Ilustrasi Keuangan"
+            class="w-full max-w-md mx-auto animate-float"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-500">
+            Fitur Unggulan
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Berbagai fitur yang akan membantu Anda mengelola keuangan dengan
+            lebih baik
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div
+            class="bg-gray-700 rounded-xl p-8 feature-card transition duration-500 ease-in-out"
+          >
+            <div
+              class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="fas fa-edit text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-center text-white">
+              Catat Pengeluaran
+            </h3>
+            <p class="text-gray-300 text-center">
+              Tambahkan pengeluaran harian dengan mudah dan cepat melalui
+              antarmuka yang sederhana.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="bg-gray-700 rounded-xl p-8 feature-card transition duration-500 ease-in-out"
+          >
+            <div
+              class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="fas fa-chart-pie text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-center text-white">
+              Analisis Otomatis
+            </h3>
+            <p class="text-gray-300 text-center">
+              Total pengeluaran langsung dihitung otomatis dengan tampilan
+              visual yang mudah dipahami.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="bg-gray-700 rounded-xl p-8 feature-card transition duration-500 ease-in-out"
+          >
+            <div
+              class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="fas fa-history text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-center text-white">
+              Riwayat Lengkap
+            </h3>
+            <p class="text-gray-300 text-center">
+              Simpan dan lihat kembali riwayat pengeluaran Anda dari waktu ke
+              waktu.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div
+            class="bg-gray-700 rounded-xl p-8 feature-card transition duration-500 ease-in-out"
+          >
+            <div
+              class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="fas fa-mobile-alt text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-center text-white">
+              Responsif
+            </h3>
+            <p class="text-gray-300 text-center">
+              Akses dari berbagai perangkat termasuk smartphone, tablet, dan
+              desktop.
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div
+            class="bg-gray-700 rounded-xl p-8 feature-card transition duration-500 ease-in-out"
+          >
+            <div
+              class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="fas fa-lock text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-center text-white">
+              Privasi Terjaga
+            </h3>
+            <p class="text-gray-300 text-center">
+              Data Anda disimpan secara lokal di perangkat Anda tanpa dikirim ke
+              server manapun.
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div
+            class="bg-gray-700 rounded-xl p-8 feature-card transition duration-500 ease-in-out"
+          >
+            <div
+              class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="fas fa-bell text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-center text-white">
+              Pengingat
+            </h3>
+            <p class="text-gray-300 text-center">
+              Dapatkan notifikasi untuk mencatat pengeluaran harian Anda secara
+              rutin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Section -->
+    <section id="app" class="py-20 bg-gray-900">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-500">
+            Aplikasi Pengeluaran
+          </h2>
+          <p class="text-xl text-gray-300">
+            Mulai catat pengeluaran Anda hari ini
+          </p>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl shadow-xl overflow-hidden">
+          <!-- Date Display -->
+          <div class="bg-green-600 px-6 py-3">
+            <h3 class="text-lg font-bold text-white" id="current-date">
+              Hari Ini: <span id="today-date"></span>
+            </h3>
+          </div>
+
+          <!-- Form Input -->
+          <div class="p-6">
+            <form id="expense-form" class="flex flex-col sm:flex-row gap-4">
+              <input
+                type="text"
+                id="description"
+                placeholder="Deskripsi pengeluaran"
+                class="flex-grow px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+              <input
+                type="number"
+                id="amount"
+                placeholder="Jumlah (Rp)"
+                class="w-full sm:w-40 px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+              <button
+                type="submit"
+                class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg transition duration-300"
+              >
+                Tambah
+              </button>
+            </form>
+          </div>
+
+          <!-- Expense Table -->
+          <div class="px-6 pb-6">
+            <div class="overflow-x-auto">
+              <table class="expense-table w-full">
+                <thead>
+                  <tr>
+                    <th class="py-3">No</th>
+                    <th>Deskripsi</th>
+                    <th>Jumlah</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody id="expense-table-body">
+                  <!-- Data will be inserted here by JavaScript -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Total -->
+            <div class="mt-6 flex justify-between items-center">
+              <h3 class="text-xl font-bold">Total Pengeluaran Hari Ini:</h3>
+              <span class="text-2xl font-bold text-green-500" id="total"
+                >Rp 0</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- History Section -->
+        <div class="mt-12 bg-gray-800 rounded-xl shadow-xl overflow-hidden">
+          <div class="bg-blue-600 px-6 py-3">
+            <h3 class="text-lg font-bold text-white">Riwayat Pengeluaran</h3>
+          </div>
+
+          <div class="p-6">
+            <ul id="history-list" class="space-y-3">
+              <!-- History items will be inserted here by JavaScript -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-500">
+            Tentang MUDAHEMAT
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Solusi sederhana untuk mengelola keuangan pribadi Anda
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-white">
+              Mengapa Memilih MUDAHEMAT?
+            </h3>
+            <p class="text-gray-300 mb-6">
+              MUDAHEMAT adalah aplikasi pengelolaan keuangan sederhana yang
+              membantu Anda mencatat dan menganalisis pengeluaran harian. Dengan
+              antarmuka yang intuitif, Anda dapat dengan mudah melacak ke mana
+              uang Anda pergi.
+            </p>
+            <p class="text-gray-300 mb-6">
+              Dibangun dengan teknologi modern, aplikasi ini berjalan sepenuhnya
+              di browser Anda tanpa memerlukan instalasi. Data Anda tetap aman
+              karena disimpan secara lokal di perangkat Anda.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                <span class="text-gray-300">Gratis digunakan</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                <span class="text-gray-300">Tanpa iklan</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                <span class="text-gray-300">Privasi terjamin</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-effect p-8 rounded-xl">
+            <h3 class="text-2xl font-bold mb-6 text-white">Tim Pengembang</h3>
+            <div class="flex items-center mb-6">
+              <img
+                src="img/profil.jpg"
+                alt="Foto Ketua"
+                class="w-32 h-32 rounded-full object-cover border border-white-shadow mr-6"
+              />
+              <div>
+                <a href="portofolio.html">
+                  <h4 class="text-xl font-bold text-white hover:text-green-500">
+                    MUH. DZULKIFLI BASAM
+                  </h4>
+                </a>
+                <p class="text-gray-300">Ketua</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-28">
+          <div>
+            <h3 class="text-xl font-bold text-white mb-4">MUDAHEMAT</h3>
+            <p class="text-gray-400">
+              Aplikasi pengelolaan keuangan sederhana untuk membantu Anda
+              mengontrol pengeluaran harian.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-white mb-4">Tautan Cepat</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-green-500 transition duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#features"
+                  class="text-gray-400 hover:text-green-500 transition duration-300"
+                  >Fitur</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#app"
+                  class="text-gray-400 hover:text-green-500 transition duration-300"
+                  >Aplikasi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-green-500 transition duration-300"
+                  >Tentang</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-white mb-4">Kontak</h3>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-envelope text-gray-400 mr-2"></i>
+                <span class="text-gray-400">kiflibasam02@gmail.com</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone text-gray-400 mr-2"></i>
+                <span class="text-gray-400">+62 823 5337 1288</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt text-gray-400 mr-2"></i>
+                <span class="text-gray-400">Makassar, Sudiang</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white mb-4">Sosial Media</h3>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <a
+                  href="https://www.facebook.com/share/1JPbrFR2XN/"
+                  class="text-gray-400 hover:text-green-500 transition duration-300"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                  <span
+                    class="text-gray-400 hover:text-green-500 transition duration-300"
+                    >Zulkifli Basam</span
+                  >
+                </a>
+              </li>
+              <li class="flex items-center">
+                <a
+                  href="https://wa.me/6282353371288"
+                  class="text-gray-400 hover:text-green-500 transition duration-300"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                  <span
+                    class="text-gray-400 hover:text-green-500 transition duration-300"
+                    >+62-823-5337-1288</span
+                  >
+                </a>
+              </li>
+              <li class="flex items-center">
+                <a
+                  href="https://www.instagram.com/kiflibasam?igsh=NGYzMTBnNm1weXE4"
+                  class="text-gray-400 hover:text-green-500 transition duration-300"
+                >
+                  <i class="fab fa-instagram"></i>
+                  <span
+                    class="text-gray-400 hover:text-green-500 transition duration-300"
+                    >kiflibasam</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 mb-4 md:mb-0">
+            &copy; 2023 MUDAHEMAT. SEMUA HAK DILINDUNGI UNDANG UNDANG.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-green-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
